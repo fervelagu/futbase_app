@@ -1,57 +1,54 @@
 import React from 'react'
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
-import FIcon from 'react-native-vector-icons/FontAwesome'
-import Icon from 'react-native-vector-icons/Entypo'
-import MCIcon from 'react-native-vector-icons/MaterialCommunityIcons'
+import EIcon from 'react-native-vector-icons/Entypo'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import MatchesNavigator from './Matches.navigator'
 import FanNavigator from './Fan.navigator'
 import HomeNavigator from './Home.navigator'
 import RewardsNavigator from './Rewards.navigator'
 import TeamNavigator from './Team.navigator'
-import { Colors } from '../utils/styles'
 
 const BottomTabs = createMaterialBottomTabNavigator()
 const BottomTabsNavigator = () => {
-	const tabBarStyle = {
-		backgroundColor: Colors.TEAM_PRIMARY,
-		borderTopWidth: 0
-	}
-
 	return (
-		<BottomTabs.Navigator initialRouteName="Home" barStyle={tabBarStyle}>
+		<BottomTabs.Navigator initialRouteName={'Home'}>
 			<BottomTabs.Screen
-				name="Matches"
+				name={'Matches'}
 				component={MatchesNavigator}
 				options={{
-					tabBarIcon: () => <MCIcon name="soccer" size={24} color={'white'} />
+					tabBarIcon: () => <Icon name={'soccer'} size={24} color={'white'} />
 				}}
 			/>
 			<BottomTabs.Screen
-				name="Fan"
+				name={'Fan'}
 				component={FanNavigator}
 				options={{
-					tabBarIcon: () => <FIcon name="user" size={24} color={'white'} />
+					tabBarIcon: () => <Icon name={'account'} size={24} color={'white'} />
 				}}
 			/>
 			<BottomTabs.Screen
-				name="Home"
+				name={'Home'}
 				component={HomeNavigator}
 				options={{
-					tabBarIcon: () => <Icon name="home" size={24} color={'white'} />
+					tabBarIcon: () => <EIcon name={'home'} size={24} color={'white'} />
 				}}
 			/>
 			<BottomTabs.Screen
-				name="Rewards"
+				name={'Rewards'}
 				component={RewardsNavigator}
 				options={{
-					tabBarIcon: () => <Icon name="star" size={24} color={'white'} />
+					tabBarIcon: () => (
+						<Icon name={'trophy-variant'} size={24} color={'white'} />
+					)
 				}}
 			/>
 			<BottomTabs.Screen
-				name="Team"
+				name={'Team'}
 				component={TeamNavigator}
 				options={{
-					tabBarIcon: () => <FIcon name="users" size={24} color={'white'} />
+					tabBarIcon: () => (
+						<Icon name={'account-group'} size={24} color={'white'} />
+					)
 				}}
 			/>
 		</BottomTabs.Navigator>
