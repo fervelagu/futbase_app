@@ -1,6 +1,5 @@
 import React from 'react'
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
-import EIcon from 'react-native-vector-icons/Entypo'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import MatchesNavigator from './Matches.navigator'
 import FanNavigator from './Fan.navigator'
@@ -30,7 +29,7 @@ const BottomTabsNavigator = () => {
 				name={'Home'}
 				component={HomeNavigator}
 				options={{
-					tabBarIcon: () => <EIcon name={'home'} size={24} color={'white'} />
+					tabBarIcon: () => <Icon name={'home'} size={24} color={'white'} />
 				}}
 			/>
 			<BottomTabs.Screen
