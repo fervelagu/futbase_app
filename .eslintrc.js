@@ -26,7 +26,7 @@ module.exports = {
 		'react-native/no-inline-styles': 2,
 		'react-native/no-color-literals': 2,
 		'react-native/no-raw-text': 2,
-		'react/prop-types': [0, { ignore: 'all' }],
-		'react-native/sort-styles': 0
+		'react-native/sort-styles': 0,
+		'react/prop-types': [0, { ignore: 'all' }]
 	}
-};
+}
