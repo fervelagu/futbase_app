@@ -6,7 +6,7 @@ const Loading = ({ message = 'loading' }) => {
 	return (
 		<View style={styles.container}>
 			<View style={styles.spinner}>
-				<ActivityIndicator size="large" color={Colors.WHITE} animating={true} />
+				<ActivityIndicator size={'large'} color={Colors.WHITE} animating />
 				<Text style={styles.text}>{message}</Text>
 			</View>
 		</View>

@@ -8,12 +8,17 @@
 
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
 import BottomTabsNavigator from './src/navigation/BottomTabs.navigator'
 
 export default function App() {
 	return (
-		<NavigationContainer>
-			<BottomTabsNavigator />
-		</NavigationContainer>
+		<SafeAreaProvider>
+			<SafeAreaView edges={['top']} flex={1}>
+				<NavigationContainer>
+					<BottomTabsNavigator />
+				</NavigationContainer>
+			</SafeAreaView>
+		</SafeAreaProvider>
 	)
 }
